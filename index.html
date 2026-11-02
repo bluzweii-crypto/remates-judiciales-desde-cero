@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 
 <head>
@@ -8,7 +8,7 @@
   <title>Masterclass Presencial | Remates Judiciales Desde Cero – Julissa Márquez</title>
   <meta name="description"
     content="Masterclass presencial de 3 horas sobre remates judiciales, inversión inmobiliaria y flipping con Julissa Márquez. Sábado 5 de diciembre de 2026, de 5:00 a 8:00 p. m., San Isidro, Lima. Inversión S/ 59. Reserva directa por WhatsApp.">
-  <meta name="theme-color" content="#10243B">
+  <meta name="theme-color" content="#043B3E">
   <link rel="canonical" href="https://remates-judiciales-desde-cero.vercel.app/">
 
   <!-- Open Graph -->
@@ -40,12 +40,17 @@
 
   <style>
     :root {
-      --navy: #10243B;
-      --navy-deep: #0B1A2B;
+      /* Identidad de marca tomada del logo de Julissa Márquez */
+      --brand: #043B3E;
+      --brand-deep: #012023;
+      --brand-mid: #0A5B5E;
+      --brand-soft: #E8F3F1;
+      --navy: #043B3E;
+      --navy-deep: #012427;
       --gold: #D5B36A;
       --gold-soft: #E8D7B2;
       --white: #FFFFFF;
-      --gray: #F1F2F4;
+      --gray: #F2F7F5;
       --wa: #16845B;
     }
 
@@ -128,8 +133,8 @@
 
     /* Header sólido al hacer scroll */
     #site-header.is-scrolled {
-      background: rgba(16, 36, 59, .96);
-      box-shadow: 0 12px 30px -18px rgba(11, 26, 43, .9);
+      background: rgba(4, 59, 62, .96);
+      box-shadow: 0 12px 30px -18px rgba(1, 36, 39, .9);
       backdrop-filter: blur(10px);
     }
 
@@ -152,11 +157,12 @@
       color: var(--navy);
     }
 
-    /* Textura sutil de fondo para bloques navy */
+    /* Textura sutil de fondo para bloques de marca */
     .navy-texture {
       background-image:
-        radial-gradient(circle at 15% 10%, rgba(213, 179, 106, .14), transparent 45%),
-        radial-gradient(circle at 85% 90%, rgba(213, 179, 106, .10), transparent 50%);
+        radial-gradient(circle at 15% 10%, rgba(213, 179, 106, .16), transparent 45%),
+        radial-gradient(circle at 85% 90%, rgba(10, 91, 94, .55), transparent 55%),
+        radial-gradient(circle at 60% 0%, rgba(232, 215, 178, .08), transparent 40%);
     }
 
     /* Carrusel de experiencia */
@@ -173,12 +179,12 @@
       height: 6px;
       width: 6px;
       border-radius: 9999px;
-      background: rgba(16, 36, 59, .22);
+      background: rgba(4, 59, 62, .22);
       transition: width .3s ease, background-color .3s ease;
     }
 
     .carousel-dot:hover {
-      background: rgba(16, 36, 59, .45);
+      background: rgba(4, 59, 62, .45);
     }
 
     .carousel-dot[aria-current="true"] {
@@ -189,6 +195,281 @@
     .carousel-nav:disabled {
       opacity: .35;
       cursor: not-allowed;
+    }
+
+    /* =======================================================
+       CAPA DE VIDA VISUAL · identidad verde petróleo + oro
+       ======================================================= */
+
+    /* Superficie principal de marca */
+    .brand-surface {
+      background:
+        radial-gradient(115% 85% at 6% 0%, rgba(10, 91, 94, .9) 0%, transparent 58%),
+        radial-gradient(85% 75% at 96% 100%, rgba(213, 179, 106, .15) 0%, transparent 55%),
+        linear-gradient(165deg, #043B3E 0%, #023134 58%, #012023 100%);
+    }
+
+    .brand-deep-surface {
+      background:
+        radial-gradient(80% 70% at 50% 0%, rgba(10, 91, 94, .5) 0%, transparent 65%),
+        linear-gradient(180deg, #012B2E 0%, #012023 100%);
+    }
+
+    /* Rejilla dorada que se desvanece */
+    .gold-grid::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .16;
+      background-image:
+        linear-gradient(to right, rgba(213, 179, 106, .4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(213, 179, 106, .4) 1px, transparent 1px);
+      background-size: 68px 68px;
+      mask-image: radial-gradient(circle at 50% 24%, #000 0%, transparent 74%);
+      -webkit-mask-image: radial-gradient(circle at 50% 24%, #000 0%, transparent 74%);
+    }
+
+    /* Aureolas que respiran */
+    .aurora {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(72px);
+      pointer-events: none;
+    }
+
+    @keyframes aurora-drift {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: .5; }
+      50% { transform: translate3d(20px, -26px, 0) scale(1.14); opacity: .85; }
+    }
+
+    .aurora-a { animation: aurora-drift 15s ease-in-out infinite; }
+    .aurora-b { animation: aurora-drift 19s ease-in-out infinite reverse; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .floaty { animation: floaty 6.5s ease-in-out infinite; }
+
+    /* Línea dorada con brillo central */
+    .gold-rule-strong {
+      height: 2px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, transparent, #D5B36A 18%, #F6EBCF 50%, #D5B36A 82%, transparent);
+      box-shadow: 0 0 14px rgba(213, 179, 106, .5);
+    }
+
+    /* Tarjetas de logo */
+    .logo-tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: .9rem;
+      border: 1px solid rgba(213, 179, 106, .42);
+      background: linear-gradient(150deg, #0A5B5E 0%, #023134 55%, #012023 100%);
+      box-shadow:
+        0 12px 28px -18px rgba(0, 0, 0, .9),
+        inset 0 1px 0 rgba(255, 255, 255, .1);
+      transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+    }
+
+    .logo-tile:hover {
+      transform: translateY(-3px);
+      border-color: rgba(213, 179, 106, .8);
+      box-shadow: 0 18px 34px -18px rgba(0, 0, 0, .9);
+    }
+
+    .logo-tile img {
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .3));
+    }
+
+    .logo-tile-light {
+      background: #FFFFFF;
+      border-color: rgba(213, 179, 106, .55);
+    }
+
+    /* Iconos grandes en degradado dorado */
+    .icon-tile {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #043B3E;
+      background: linear-gradient(150deg, #F3E4BF 0%, #D5B36A 46%, #B08E45 100%);
+      box-shadow:
+        0 16px 36px -16px rgba(213, 179, 106, .8),
+        inset 0 1px 0 rgba(255, 255, 255, .6);
+    }
+
+    .icon-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .32);
+      pointer-events: none;
+    }
+
+    /* Elevación suave al pasar el cursor */
+    .lift-card {
+      transition: transform .45s cubic-bezier(.2, .7, .2, 1), box-shadow .45s ease,
+        border-color .45s ease, background-color .45s ease;
+    }
+
+    .lift-card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Insignia con destello */
+    .badge-live {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge-live::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 38%;
+      height: 100%;
+      background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .38), transparent);
+      animation: badge-sheen 4s ease-in-out infinite;
+    }
+
+    @keyframes badge-sheen {
+      0%, 55% { left: -60%; }
+      100% { left: 135%; }
+    }
+
+    /* Punto que late */
+    .pulse-dot {
+      position: relative;
+    }
+
+    .pulse-dot::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: currentColor;
+      animation: dot-pulse 2.2s ease-out infinite;
+    }
+
+    @keyframes dot-pulse {
+      0% { transform: scale(1); opacity: .6; }
+      70% { transform: scale(2.6); opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* Cinta en movimiento */
+    .marquee {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-slide 38s linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-slide {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Ornamento con líneas doradas */
+    .ornament {
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      height: 1px;
+      width: 2.6rem;
+      background: linear-gradient(90deg, transparent, rgba(213, 179, 106, .85));
+    }
+
+    .ornament::after {
+      background: linear-gradient(90deg, rgba(213, 179, 106, .85), transparent);
+    }
+
+    /* Marca de agua tipográfica */
+    .watermark {
+      position: absolute;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 700;
+      line-height: .78;
+      letter-spacing: -.04em;
+      color: rgba(213, 179, 106, .06);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Tarjeta clara con acento superior */
+    .soft-card {
+      position: relative;
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid rgba(4, 59, 62, .1);
+      box-shadow: 0 14px 34px -28px rgba(1, 32, 35, .65);
+      transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+    }
+
+    .soft-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 3px;
+      background: linear-gradient(90deg, #D5B36A, rgba(213, 179, 106, 0));
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+
+    .soft-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(213, 179, 106, .55);
+      box-shadow: 0 24px 44px -30px rgba(1, 32, 35, .75);
+    }
+
+    .soft-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Cuenta regresiva */
+    .countdown-num {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Enlace con subrayado animado */
+    .link-underline {
+      position: relative;
+    }
+
+    .link-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 1px;
+      width: 0;
+      background: #D5B36A;
+      transition: width .35s ease;
+    }
+
+    .link-underline:hover::after {
+      width: 100%;
     }
   </style>
 
@@ -234,22 +515,23 @@
   </script>
 </head>
 
-<body class="bg-white pb-24 text-[#10243B] antialiased md:pb-0">
+<body class="bg-white pb-24 text-[#043B3E] antialiased md:pb-0">
   <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
   <!-- ================= HEADER ================= -->
   <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
       <a href="#inicio" class="flex items-center gap-3">
-        <span
-          class="flex h-11 w-20 items-center justify-center rounded-xl border border-[#D5B36A]/40 bg-[linear-gradient(135deg,#043B3E,#011A1E)] p-1.5 shadow-sm shadow-black/20">
+        <span class="logo-tile h-12 w-[5.5rem] p-1.5">
           <img src="img/logo-julissa.jpeg" alt="Logo de Julissa Márquez"
-            class="h-full w-full object-contain" width="80" height="44">
+            class="h-full w-full object-contain" width="88" height="48">
         </span>
         <span class="hidden leading-tight text-white sm:block">
-          <span class="block text-[10px] font-semibold uppercase tracking-[0.28em] text-[#D5B36A]">Masterclass
-            presencial</span>
-          <span class="block text-sm font-semibold">Remates Judiciales Desde Cero</span>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-[#D5B36A]/10 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.26em] text-[#E8D7B2] ring-1 ring-[#D5B36A]/30">
+            <span class="h-1 w-1 rounded-full bg-[#D5B36A]"></span>
+            Masterclass presencial
+          </span>
+          <span class="mt-1 block text-[15px] font-semibold">Remates Judiciales Desde Cero</span>
         </span>
       </a>
 
@@ -273,20 +555,29 @@
   <main id="contenido">
 
     <!-- ================= 1. HERO ================= -->
-    <section id="inicio" class="navy-texture relative overflow-hidden bg-[#10243B] pt-28 pb-16 text-white sm:pt-32 lg:pt-36 lg:pb-24">
-      <div class="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-[#D5B36A]/10 blur-3xl"
-        aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-[#D5B36A]/5 blur-3xl"
+    <section id="inicio"
+      class="brand-surface gold-grid relative overflow-hidden pt-28 pb-0 text-white sm:pt-32 lg:pt-36">
+      <div class="aurora aurora-a -right-24 top-20 h-72 w-72 bg-[#0A5B5E]/70" aria-hidden="true"></div>
+      <div class="aurora aurora-b -left-32 bottom-16 h-80 w-80 bg-[#D5B36A]/12" aria-hidden="true"></div>
+      <div class="watermark -right-6 top-24 hidden select-none text-[13rem] lg:block" aria-hidden="true">JM</div>
+      <div class="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#D5B36A]/50 to-transparent"
         aria-hidden="true"></div>
 
       <div
         class="relative mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16 lg:px-8">
         <div>
-          <p
-            class="mb-6 inline-flex items-center gap-3 rounded-full border border-[#D5B36A]/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E8D7B2]">
-            <span class="h-1.5 w-1.5 rounded-full bg-[#D5B36A]" aria-hidden="true"></span>
-            Masterclass presencial | 3 horas
-          </p>
+          <div class="mb-7 flex flex-wrap items-center gap-3">
+            <span
+              class="badge-live inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#E8D7B2] via-[#D5B36A] to-[#B08E45] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.26em] text-[#012023] shadow-lg shadow-[#D5B36A]/30 sm:text-[12px]">
+              <span class="pulse-dot h-2 w-2 rounded-full bg-[#012023]" aria-hidden="true"></span>
+              Masterclass presencial
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-[#D5B36A]/35 bg-white/[0.06] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#E8D7B2] backdrop-blur">
+              <i class="fa-regular fa-clock text-[#D5B36A]" aria-hidden="true"></i>
+              3 horas · San Isidro, Lima
+            </span>
+          </div>
 
           <h1>
             <span class="font-display block max-w-2xl text-2xl font-semibold leading-snug text-white/90 sm:text-3xl">
@@ -309,19 +600,19 @@
 
           <!-- Datos del evento -->
           <dl class="mt-8 grid max-w-xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 sm:grid-cols-4">
-            <div class="bg-[#10243B]/80 px-4 py-4">
+            <div class="bg-[#043B3E]/80 px-4 py-4">
               <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Fecha</dt>
               <dd class="mt-1 text-sm font-semibold leading-snug">Sáb. 5 dic 2026</dd>
             </div>
-            <div class="bg-[#10243B]/80 px-4 py-4">
+            <div class="bg-[#043B3E]/80 px-4 py-4">
               <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Horario</dt>
               <dd class="mt-1 text-sm font-semibold leading-snug">5:00 – 8:00 p. m.</dd>
             </div>
-            <div class="bg-[#10243B]/80 px-4 py-4">
+            <div class="bg-[#043B3E]/80 px-4 py-4">
               <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Lugar</dt>
               <dd class="mt-1 text-sm font-semibold leading-snug">San Isidro, Lima</dd>
             </div>
-            <div class="bg-[#10243B]/80 px-4 py-4">
+            <div class="bg-[#043B3E]/80 px-4 py-4">
               <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Inversión</dt>
               <dd class="mt-1 text-sm font-semibold leading-snug">S/ 59</dd>
             </div>
@@ -342,20 +633,28 @@
 
         <!-- Fotografía real de Julissa -->
         <figure class="relative mx-auto w-full max-w-md">
-          <div class="pointer-events-none absolute -inset-3 rounded-[2rem] border border-[#D5B36A]/35"
+          <div
+            class="pointer-events-none absolute -inset-5 rounded-[2.5rem] bg-[radial-gradient(circle_at_70%_18%,rgba(213,179,106,.3),transparent_62%)] blur-2xl"
             aria-hidden="true"></div>
-          <div class="relative overflow-hidden rounded-[1.75rem] bg-[#0B1A2B] shadow-2xl shadow-black/40">
+          <div class="pointer-events-none absolute -inset-3 rounded-[2rem] border border-[#D5B36A]/45"
+            aria-hidden="true"></div>
+          <div class="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#012427] shadow-2xl shadow-black/50">
             <img src="img/julissa-marquez-hero.jpg"
               alt="Julissa Márquez, especialista en remates judiciales, flipping e inversiones inmobiliarias"
-              class="aspect-[4/5] w-full object-cover object-center" width="720" height="1280" fetchpriority="high"
+              class="aspect-[4/5] w-full object-cover object-center" width="712" height="1270" fetchpriority="high"
               decoding="async">
             <div
-              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B1A2B] via-[#0B1A2B]/70 to-transparent p-6 pt-20">
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#012427] via-[#012427]/70 to-transparent p-6 pt-20">
               <p class="font-display text-3xl font-semibold leading-none">Julissa Márquez</p>
               <p class="mt-2 text-sm leading-snug text-white/75">
                 Especialista en Remates Judiciales, Flipping e Inversiones Inmobiliarias
               </p>
             </div>
+          </div>
+          <div
+            class="floaty absolute -right-4 -top-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#D5B36A]/70 bg-white p-2 shadow-xl shadow-black/40 sm:-right-6 sm:h-20 sm:w-20">
+            <img src="img/logo-trova.jpeg" alt="Trova Inversiones" class="h-full w-full object-contain" width="72"
+              height="40" loading="lazy" decoding="async">
           </div>
           <figcaption class="mt-5 flex items-center justify-center gap-3 text-center text-xs uppercase tracking-[0.18em] text-white/55">
             <span class="h-px w-8 bg-[#D5B36A]/60" aria-hidden="true"></span>
@@ -364,61 +663,114 @@
           </figcaption>
         </figure>
       </div>
+
+      <!-- Franja de marca: logos en posición estratégica -->
+      <div class="relative mx-auto mt-14 max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div
+          class="reveal flex flex-col items-center justify-between gap-5 rounded-2xl border border-[#D5B36A]/25 bg-white/[0.05] px-6 py-5 text-center backdrop-blur sm:flex-row sm:text-left">
+          <div class="flex flex-col items-center gap-4 sm:flex-row">
+            <div class="flex items-center gap-3">
+              <span class="logo-tile h-12 w-[5.5rem] p-1.5">
+                <img src="img/logo-julissa.jpeg" alt="Marca personal de Julissa Márquez"
+                  class="h-full w-full object-contain" width="88" height="48" loading="lazy" decoding="async">
+              </span>
+              <span class="logo-tile logo-tile-light h-12 w-24 p-1.5">
+                <img src="img/logo-trova.jpeg" alt="Trova Inversiones" class="h-full w-full object-contain"
+                  width="96" height="40" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/60">
+              Una masterclass de Julissa Márquez
+              <span class="text-[#D5B36A]">·</span> Trova Inversiones
+            </p>
+          </div>
+          <p class="ornament text-[10px] font-semibold uppercase tracking-[0.26em] text-[#E8D7B2]">
+            Remates · Flipping · Inversiones
+          </p>
+        </div>
+      </div>
+
+      <!-- Cinta en movimiento -->
+      <div class="relative mt-12 border-y border-[#D5B36A]/20 bg-[#012023]/70 py-3">
+        <div class="marquee">
+          <div
+            class="marquee-track text-[10px] font-semibold uppercase tracking-[0.32em] text-[#E8D7B2]/80">
+            <div class="flex shrink-0 items-center gap-10 pr-10">
+              <span>Remates judiciales</span><span class="text-[#D5B36A]">◆</span>
+              <span>Flipping inmobiliario</span><span class="text-[#D5B36A]">◆</span>
+              <span>Inversiones inmobiliarias</span><span class="text-[#D5B36A]">◆</span>
+              <span>Sábado 5 de diciembre de 2026</span><span class="text-[#D5B36A]">◆</span>
+              <span>San Isidro, Lima</span><span class="text-[#D5B36A]">◆</span>
+              <span>Inversión S/ 59</span><span class="text-[#D5B36A]">◆</span>
+            </div>
+            <div class="flex shrink-0 items-center gap-10 pr-10" aria-hidden="true">
+              <span>Remates judiciales</span><span class="text-[#D5B36A]">◆</span>
+              <span>Flipping inmobiliario</span><span class="text-[#D5B36A]">◆</span>
+              <span>Inversiones inmobiliarias</span><span class="text-[#D5B36A]">◆</span>
+              <span>Sábado 5 de diciembre de 2026</span><span class="text-[#D5B36A]">◆</span>
+              <span>San Isidro, Lima</span><span class="text-[#D5B36A]">◆</span>
+              <span>Inversión S/ 59</span><span class="text-[#D5B36A]">◆</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ================= 2. IDENTIFICACIÓN ================= -->
-    <section class="bg-[#F1F2F4] py-20 sm:py-24" aria-labelledby="titulo-identificacion">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden bg-[#F2F7F5] py-20 sm:py-24" aria-labelledby="titulo-identificacion">
+      <div class="pointer-events-none absolute -right-24 top-10 h-64 w-64 rounded-full bg-[#D5B36A]/10 blur-3xl"
+        aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">¿Te reconoces?</p>
+          <span class="ornament text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/55">¿Te reconoces?</span>
           <h2 id="titulo-identificacion" class="font-display mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.9rem]">
             ¿Te interesa invertir en propiedades, pero no sabes por dónde empezar?
           </h2>
           <div class="gold-rule mx-auto mt-6 w-24"></div>
-          <p class="mt-6 text-lg leading-relaxed text-[#10243B]/70">
+          <p class="mt-6 text-lg leading-relaxed text-[#043B3E]/70">
             Quizás has escuchado hablar de los remates judiciales, has visto propiedades a precios atractivos o
             conoces personas que invierten en inmuebles, pero todavía no comprendes cómo funciona este mercado.
           </p>
-          <p class="mt-4 text-lg leading-relaxed text-[#10243B]/70">
+          <p class="mt-4 text-lg leading-relaxed text-[#043B3E]/70">
             Tal vez te interesa el mundo inmobiliario, pero no sabes cómo evaluar una oportunidad, qué revisar antes
             de tomar una decisión o cómo dar tus primeros pasos sin experiencia previa.
           </p>
-          <p class="mt-4 text-lg font-semibold leading-relaxed text-[#10243B]">
+          <p class="mt-4 text-lg font-semibold leading-relaxed text-[#043B3E]">
             Esta masterclass existe para explicarte ese proceso con claridad, desde lo más básico y en un formato
             presencial de tres horas junto a Julissa Márquez.
           </p>
         </div>
 
         <ul class="mt-12 grid gap-4 sm:grid-cols-2">
-          <li class="reveal flex items-start gap-4 rounded-2xl border border-[#10243B]/10 bg-white p-6 shadow-sm shadow-[#10243B]/5">
-            <span class="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#D5B36A]/15 text-sm text-[#10243B]">
+          <li class="soft-card reveal flex items-start gap-4 rounded-2xl p-6">
+            <span class="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[#043B3E] text-sm text-[#D5B36A] shadow-md shadow-[#043B3E]/25">
               <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </span>
-            <p class="text-[15px] leading-relaxed text-[#10243B]/75">
+            <p class="text-[15px] leading-relaxed text-[#043B3E]/75">
               Has escuchado hablar de remates judiciales, pero todavía no sabes cómo funcionan.
             </p>
           </li>
-          <li class="reveal flex items-start gap-4 rounded-2xl border border-[#10243B]/10 bg-white p-6 shadow-sm shadow-[#10243B]/5" style="transition-delay: 80ms">
-            <span class="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#D5B36A]/15 text-sm text-[#10243B]">
+          <li class="soft-card reveal flex items-start gap-4 rounded-2xl p-6" style="transition-delay: 80ms">
+            <span class="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[#043B3E] text-sm text-[#D5B36A] shadow-md shadow-[#043B3E]/25">
               <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
             </span>
-            <p class="text-[15px] leading-relaxed text-[#10243B]/75">
+            <p class="text-[15px] leading-relaxed text-[#043B3E]/75">
               Te interesa invertir en propiedades y no sabes cómo evaluar una oportunidad.
             </p>
           </li>
-          <li class="reveal flex items-start gap-4 rounded-2xl border border-[#10243B]/10 bg-white p-6 shadow-sm shadow-[#10243B]/5" style="transition-delay: 160ms">
-            <span class="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#D5B36A]/15 text-sm text-[#10243B]">
+          <li class="soft-card reveal flex items-start gap-4 rounded-2xl p-6" style="transition-delay: 160ms">
+            <span class="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[#043B3E] text-sm text-[#D5B36A] shadow-md shadow-[#043B3E]/25">
               <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
             </span>
-            <p class="text-[15px] leading-relaxed text-[#10243B]/75">
+            <p class="text-[15px] leading-relaxed text-[#043B3E]/75">
               Quieres entender cómo se relacionan los remates judiciales con el flipping inmobiliario.
             </p>
           </li>
-          <li class="reveal flex items-start gap-4 rounded-2xl border border-[#10243B]/10 bg-white p-6 shadow-sm shadow-[#10243B]/5" style="transition-delay: 240ms">
-            <span class="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-full bg-[#D5B36A]/15 text-sm text-[#10243B]">
+          <li class="soft-card reveal flex items-start gap-4 rounded-2xl p-6" style="transition-delay: 240ms">
+            <span class="mt-0.5 flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-[#043B3E] text-sm text-[#D5B36A] shadow-md shadow-[#043B3E]/25">
               <i class="fa-solid fa-user-group" aria-hidden="true"></i>
             </span>
-            <p class="text-[15px] leading-relaxed text-[#10243B]/75">
+            <p class="text-[15px] leading-relaxed text-[#043B3E]/75">
               Buscas una explicación clara, presencial y sin promesas de rentabilidad.
             </p>
           </li>
@@ -434,25 +786,23 @@
           <div class="reveal relative mx-auto w-full max-w-sm lg:sticky lg:top-24">
             <div class="pointer-events-none absolute -inset-3 rounded-[2rem] border border-[#D5B36A]/45"
               aria-hidden="true"></div>
-            <div class="relative overflow-hidden rounded-[1.75rem] bg-[#10243B]">
+            <div class="relative overflow-hidden rounded-[1.75rem] border border-[#D5B36A]/25 bg-[#043B3E] shadow-2xl shadow-[#043B3E]/25">
               <img src="img/julissa-marquez-web.jpg"
                 alt="Retrato de Julissa Márquez, expositora de la masterclass"
                 class="aspect-[4/5] w-full object-cover object-top" width="1200" height="1776" loading="lazy"
                 decoding="async">
             </div>
             <div class="mt-8 grid grid-cols-2 gap-4">
-              <div
-                class="flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#D5B36A]/30 bg-[linear-gradient(135deg,#043B3E,#011A1E)] p-4 shadow-sm shadow-[#10243B]/10">
+              <div class="logo-tile flex-col gap-3 rounded-2xl p-4">
                 <img src="img/logo-julissa.jpeg" alt="Marca personal de Julissa Márquez"
-                  class="h-12 w-auto max-w-full object-contain" width="160" height="92" loading="lazy"
+                  class="h-14 w-auto max-w-full object-contain" width="160" height="92" loading="lazy"
                   decoding="async">
-                <span class="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/55">Marca personal</span>
+                <span class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#E8D7B2]/85">Marca personal</span>
               </div>
-              <div
-                class="flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#10243B]/10 bg-white p-4 shadow-sm shadow-[#10243B]/5">
-                <img src="img/logo-trova.jpeg" alt="Trova Inversiones" class="h-12 w-auto max-w-full object-contain"
+              <div class="logo-tile logo-tile-light flex-col gap-3 rounded-2xl p-4">
+                <img src="img/logo-trova.jpeg" alt="Trova Inversiones" class="h-14 w-auto max-w-full object-contain"
                   width="180" height="68" loading="lazy" decoding="async">
-                <span class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#10243B]/45">Trova
+                <span class="text-[9px] font-semibold uppercase tracking-[0.18em] text-[#043B3E]/50">Trova
                   Inversiones</span>
               </div>
             </div>
@@ -461,21 +811,21 @@
           <!-- Texto -->
           <div>
             <div class="reveal">
-              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">Conoce a tu expositora</p>
+              <span class="ornament text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/55">Conoce a tu expositora</span>
               <h2 id="titulo-expositora" class="font-display mt-3 text-4xl font-bold sm:text-5xl">Julissa Márquez</h2>
-              <p class="mt-3 text-lg font-medium text-[#10243B]/70">
+              <p class="mt-3 text-lg font-medium text-[#043B3E]/70">
                 Especialista en Remates Judiciales, Flipping e Inversiones Inmobiliarias.
               </p>
             </div>
 
-            <div class="reveal mt-8 space-y-5 text-[17px] leading-relaxed text-[#10243B]/75">
+            <div class="reveal mt-8 space-y-5 text-[17px] leading-relaxed text-[#043B3E]/75">
               <p>
                 Hace 4 años decidí abrirme camino en el mundo de las inversiones inmobiliarias. Desde entonces he
                 participado en la compra y venta de 15 propiedades, a través de remates judiciales, compras directas y
                 flipping inmobiliario.
               </p>
               <p>
-                Hoy, a través de <strong class="font-semibold text-[#10243B]">TROVA INVERSIONES</strong>, continúo
+                Hoy, a través de <strong class="font-semibold text-[#043B3E]">TROVA INVERSIONES</strong>, continúo
                 desarrollando mi pasión por encontrar oportunidades en el mercado inmobiliario.
               </p>
               <p>
@@ -485,22 +835,22 @@
             </div>
 
             <p
-              class="reveal mt-8 border-l-2 border-[#D5B36A] pl-5 font-display text-2xl font-semibold leading-snug text-[#10243B] sm:text-[1.7rem]">
+              class="reveal mt-8 border-l-2 border-[#D5B36A] pl-5 font-display text-2xl font-semibold leading-snug text-[#043B3E] sm:text-[1.7rem]">
               Quiero compartir contigo lo que he aprendido en el camino, porque sé que detrás de cada gran oportunidad
               primero hay alguien que se atreve a aprender.
             </p>
 
             <!-- Firma -->
-            <div class="reveal mt-8 border-t border-[#10243B]/10 pt-6">
-              <p class="font-display text-2xl font-semibold tracking-wide text-[#10243B]">JULISSA MÁRQUEZ</p>
-              <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">
+            <div class="reveal mt-8 border-t border-[#043B3E]/10 pt-6">
+              <p class="font-display text-2xl font-semibold tracking-wide text-[#043B3E]">JULISSA MÁRQUEZ</p>
+              <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/50">
                 TROVA INVERSIONES
               </p>
             </div>
 
             <!-- Cifras -->
-            <div class="reveal mt-10 overflow-hidden rounded-2xl bg-[#10243B] text-white">
-              <div class="navy-texture px-6 py-8 sm:px-8">
+            <div class="reveal mt-10 overflow-hidden rounded-2xl border border-[#D5B36A]/35 text-white shadow-xl shadow-[#043B3E]/20">
+              <div class="brand-surface px-6 py-8 sm:px-8">
                 <div class="grid grid-cols-2 gap-6">
                   <div>
                     <p class="font-display text-4xl font-bold text-[#D5B36A]">4 años</p>
@@ -522,15 +872,15 @@
     </section>
 
     <!-- ================= 3B. EXPERIENCIA ================= -->
-    <section class="bg-[#F1F2F4] py-20 sm:py-24" aria-labelledby="titulo-experiencia">
+    <section class="bg-[#F2F7F5] py-20 sm:py-24" aria-labelledby="titulo-experiencia">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">Experiencia</p>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/50">Experiencia</p>
           <h2 id="titulo-experiencia" class="font-display mt-3 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.9rem]">
             La experiencia se construye operación tras operación
           </h2>
           <div class="gold-rule mx-auto mt-6 w-24"></div>
-          <p class="mt-6 text-lg leading-relaxed text-[#10243B]/70">
+          <p class="mt-6 text-lg leading-relaxed text-[#043B3E]/70">
             Un recorrido visual por parte de mi experiencia en el ámbito inmobiliario: propiedades, operaciones y
             aprendizaje construido en la práctica.
           </p>
@@ -544,7 +894,7 @@
               tabindex="0" data-carousel-track>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 1 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-01.jpg')"></div>
                   <img src="img/experiencia/experiencia-01.jpg"
@@ -554,7 +904,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 2 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-02.jpg')"></div>
                   <img src="img/experiencia/experiencia-02.jpg"
@@ -564,7 +914,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 3 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-03.jpg')"></div>
                   <img src="img/experiencia/experiencia-03.jpg"
@@ -574,7 +924,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 4 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-04.jpg')"></div>
                   <img src="img/experiencia/experiencia-04.jpg"
@@ -584,7 +934,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 5 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-05.jpg')"></div>
                   <img src="img/experiencia/experiencia-05.jpg"
@@ -594,7 +944,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 6 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-06.jpg')"></div>
                   <img src="img/experiencia/experiencia-06.jpg"
@@ -604,7 +954,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 7 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-07.jpg')"></div>
                   <img src="img/experiencia/experiencia-07.jpg"
@@ -614,7 +964,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 8 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-08.jpg')"></div>
                   <img src="img/experiencia/experiencia-08.jpg"
@@ -624,7 +974,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 9 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-09.jpg')"></div>
                   <img src="img/experiencia/experiencia-09.jpg"
@@ -634,7 +984,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 10 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-10.jpg')"></div>
                   <img src="img/experiencia/experiencia-10.jpg"
@@ -644,7 +994,7 @@
               </figure>
               <figure class="carousel-slide w-full flex-none snap-start px-1.5 sm:w-1/2 lg:w-1/3" role="group" aria-roledescription="diapositiva"
                 aria-label="Foto 11 de 11">
-                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B1A2B] shadow-sm shadow-[#10243B]/10">
+                <div class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#012427] shadow-sm shadow-[#043B3E]/10">
                   <div class="absolute inset-0 scale-110 bg-cover bg-center opacity-35 blur-2xl" aria-hidden="true"
                     style="background-image:url('img/experiencia/experiencia-11.jpg')"></div>
                   <img src="img/experiencia/experiencia-11.jpg"
@@ -657,33 +1007,33 @@
 
           <div class="mt-5 flex items-center justify-between gap-4">
             <button type="button" data-carousel-prev aria-label="Ver foto anterior"
-              class="carousel-nav flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#10243B]/15 bg-white text-[#10243B] shadow-sm transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
+              class="carousel-nav flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#043B3E]/15 bg-white text-[#043B3E] shadow-sm transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
               <i class="fa-solid fa-arrow-left text-sm" aria-hidden="true"></i>
             </button>
 
             <div class="flex min-w-0 flex-col items-center gap-2">
               <div class="flex flex-wrap items-center justify-center gap-1.5" data-carousel-dots></div>
-              <p class="text-xs font-semibold tracking-[0.14em] text-[#10243B]/55">
+              <p class="text-xs font-semibold tracking-[0.14em] text-[#043B3E]/55">
                 <span data-carousel-counter aria-live="polite">1</span> / 11
               </p>
             </div>
 
             <button type="button" data-carousel-next aria-label="Ver foto siguiente"
-              class="carousel-nav flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#10243B]/15 bg-white text-[#10243B] shadow-sm transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
+              class="carousel-nav flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#043B3E]/15 bg-white text-[#043B3E] shadow-sm transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
               <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
             </button>
           </div>
 
-          <p class="mt-3 text-center text-xs text-[#10243B]/45">Desliza o usa las flechas para recorrer las 11
+          <p class="mt-3 text-center text-xs text-[#043B3E]/45">Desliza o usa las flechas para recorrer las 11
             fotos.</p>
         </div>
 
-        <div class="reveal mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[#10243B]/10 bg-white px-6 py-6 sm:flex-row sm:px-8">
-          <p class="text-center text-sm font-semibold text-[#10243B] sm:text-left">
+        <div class="reveal mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-6 sm:flex-row sm:px-8">
+          <p class="text-center text-sm font-semibold text-[#043B3E] sm:text-left">
             4 años de experiencia · 15 propiedades compradas y vendidas
           </p>
           <a href="#masterclass"
-            class="inline-flex items-center gap-2 rounded-full border border-[#10243B]/20 px-5 py-2.5 text-sm font-semibold text-[#10243B] transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
+            class="inline-flex items-center gap-2 rounded-full border border-[#043B3E]/20 px-5 py-2.5 text-sm font-semibold text-[#043B3E] transition hover:border-[#D5B36A] hover:bg-[#D5B36A]/10">
             Ver de qué trata la masterclass
             <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
           </a>
@@ -692,7 +1042,7 @@
     </section>
 
     <!-- ================= 4. QUÉ ES LA MASTERCLASS ================= -->
-    <section id="masterclass" class="navy-texture scroll-mt-24 overflow-hidden bg-[#10243B] py-20 text-white sm:py-24"
+    <section id="masterclass" class="navy-texture scroll-mt-24 overflow-hidden bg-[#043B3E] py-20 text-white sm:py-24"
       aria-labelledby="titulo-masterclass">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
@@ -758,11 +1108,11 @@
     <section class="bg-white py-20 sm:py-24" aria-labelledby="titulo-para-quien">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">Perfil del participante</p>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/50">Perfil del participante</p>
           <h2 id="titulo-para-quien" class="font-display mt-3 text-3xl font-bold sm:text-4xl lg:text-[2.9rem]">
             ¿Esta masterclass es para ti?
           </h2>
-          <p class="mt-5 text-lg leading-relaxed text-[#10243B]/70">
+          <p class="mt-5 text-lg leading-relaxed text-[#043B3E]/70">
             Esta experiencia está dirigida especialmente a personas que quieren comenzar desde cero, sin experiencia
             previa.
           </p>
@@ -770,42 +1120,42 @@
 
         <ul class="mx-auto mt-12 grid max-w-4xl gap-x-10 gap-y-6 sm:grid-cols-2">
           <li class="reveal flex items-start gap-4">
-            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B] text-xs text-[#D5B36A]">
+            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E] text-xs text-[#D5B36A]">
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </span>
-            <p class="text-[17px] leading-relaxed text-[#10243B]/80">
+            <p class="text-[17px] leading-relaxed text-[#043B3E]/80">
               Personas que quieren aprender sobre remates judiciales desde cero.
             </p>
           </li>
           <li class="reveal flex items-start gap-4" style="transition-delay: 60ms">
-            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B] text-xs text-[#D5B36A]">
+            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E] text-xs text-[#D5B36A]">
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </span>
-            <p class="text-[17px] leading-relaxed text-[#10243B]/80">
+            <p class="text-[17px] leading-relaxed text-[#043B3E]/80">
               Personas interesadas en inversiones inmobiliarias.
             </p>
           </li>
           <li class="reveal flex items-start gap-4" style="transition-delay: 120ms">
-            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B] text-xs text-[#D5B36A]">
+            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E] text-xs text-[#D5B36A]">
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </span>
-            <p class="text-[17px] leading-relaxed text-[#10243B]/80">
+            <p class="text-[17px] leading-relaxed text-[#043B3E]/80">
               Quienes desean conocer nuevas alternativas para adquirir propiedades.
             </p>
           </li>
           <li class="reveal flex items-start gap-4" style="transition-delay: 180ms">
-            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B] text-xs text-[#D5B36A]">
+            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E] text-xs text-[#D5B36A]">
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </span>
-            <p class="text-[17px] leading-relaxed text-[#10243B]/80">
+            <p class="text-[17px] leading-relaxed text-[#043B3E]/80">
               Personas interesadas en el flipping inmobiliario.
             </p>
           </li>
           <li class="reveal flex items-start gap-4 sm:col-span-2" style="transition-delay: 240ms">
-            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B] text-xs text-[#D5B36A]">
+            <span class="mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E] text-xs text-[#D5B36A]">
               <i class="fa-solid fa-check" aria-hidden="true"></i>
             </span>
-            <p class="text-[17px] leading-relaxed text-[#10243B]/80">
+            <p class="text-[17px] leading-relaxed text-[#043B3E]/80">
               Quienes buscan comprender mejor el mercado inmobiliario antes de dar sus primeros pasos.
             </p>
           </li>
@@ -813,202 +1163,234 @@
       </div>
     </section>
 
-    <!-- ================= 6. INFORMACIÓN DEL EVENTO ================= -->
-    <section id="evento" class="scroll-mt-24 bg-white py-20 sm:py-24" aria-labelledby="titulo-evento">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <!-- ================= 6. MASTERCLASS PRESENCIAL: FECHA, DATOS Y RESERVA ================= -->
+    <section id="evento"
+      class="brand-surface gold-grid relative scroll-mt-24 overflow-hidden py-20 text-white sm:py-24"
+      aria-labelledby="titulo-evento">
+      <div class="aurora aurora-a -right-24 top-10 h-72 w-72 bg-[#0A5B5E]/70" aria-hidden="true"></div>
+      <div class="aurora aurora-b -left-28 bottom-0 h-80 w-80 bg-[#D5B36A]/12" aria-hidden="true"></div>
+      <div class="watermark -left-8 bottom-6 hidden text-[12rem] lg:block" aria-hidden="true">2026</div>
+
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">Reserva la fecha</p>
-          <h2 id="titulo-evento" class="font-display mt-3 text-3xl font-bold sm:text-4xl lg:text-[2.9rem]">
-            Información del evento
+          <span
+            class="badge-live inline-flex items-center gap-2.5 rounded-full border border-[#D5B36A]/70 bg-[#D5B36A]/10 px-5 py-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#E8D7B2]">
+            <span class="pulse-dot h-2 w-2 rounded-full bg-[#D5B36A]" aria-hidden="true"></span>
+            Inscripciones abiertas
+          </span>
+
+          <h2 id="titulo-evento" class="font-display mt-6 text-4xl font-bold leading-[1.02] sm:text-5xl lg:text-6xl">
+            Masterclass <span class="text-[#D5B36A]">Presencial</span>
           </h2>
+          <p class="mt-3 font-display text-2xl font-semibold text-[#E8D7B2] sm:text-3xl">
+            Remates Judiciales Desde Cero
+          </p>
+          <div class="gold-rule-strong mx-auto mt-7 w-32"></div>
+          <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            Una sola fecha, tres horas y toda la información que necesitas para reservar tu lugar.
+          </p>
         </div>
 
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="reveal rounded-2xl border border-[#10243B]/10 bg-white p-7 text-center transition hover:-translate-y-1 hover:border-[#D5B36A] hover:shadow-lg hover:shadow-[#10243B]/5">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10243B] text-[#D5B36A]">
-              <i class="fa-regular fa-calendar-days" aria-hidden="true"></i>
-            </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#10243B]/50">Fecha</h3>
-            <p class="mt-2 text-lg font-semibold">Sábado 5 de diciembre de 2026</p>
+        <!-- Cuenta regresiva -->
+        <div class="reveal mt-10 flex justify-center" data-countdown hidden>
+          <div
+            class="flex items-stretch gap-3 rounded-2xl border border-[#D5B36A]/30 bg-white/[0.05] px-4 py-4 backdrop-blur sm:gap-6 sm:px-7">
+            <div class="min-w-[58px] text-center sm:min-w-[76px]">
+              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="days">00</p>
+              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Días</p>
+            </div>
+            <span class="w-px bg-white/10" aria-hidden="true"></span>
+            <div class="min-w-[58px] text-center sm:min-w-[76px]">
+              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="hours">00</p>
+              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Horas</p>
+            </div>
+            <span class="w-px bg-white/10" aria-hidden="true"></span>
+            <div class="min-w-[58px] text-center sm:min-w-[76px]">
+              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="minutes">00</p>
+              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Minutos</p>
+            </div>
+            <span class="w-px bg-white/10" aria-hidden="true"></span>
+            <div class="min-w-[58px] text-center sm:min-w-[76px]">
+              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="seconds">00</p>
+              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Segundos</p>
+            </div>
           </div>
-          <div class="reveal rounded-2xl border border-[#10243B]/10 bg-white p-7 text-center transition hover:-translate-y-1 hover:border-[#D5B36A] hover:shadow-lg hover:shadow-[#10243B]/5" style="transition-delay: 60ms">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10243B] text-[#D5B36A]">
-              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+        </div>
+
+        <!-- Datos del evento en iconos grandes -->
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="lift-card reveal group rounded-3xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur hover:border-[#D5B36A]/70 hover:bg-white/[0.09]">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-regular fa-calendar-days text-2xl sm:text-3xl" aria-hidden="true"></i>
             </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#10243B]/50">Hora</h3>
-            <p class="mt-2 text-lg font-semibold">5:00 p. m. a 8:00 p. m.</p>
-          </div>
-          <div class="reveal rounded-2xl border border-[#10243B]/10 bg-white p-7 text-center transition hover:-translate-y-1 hover:border-[#D5B36A] hover:shadow-lg hover:shadow-[#10243B]/5" style="transition-delay: 120ms">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10243B] text-[#D5B36A]">
-              <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Fecha</p>
+            <p class="mt-2 text-xl font-semibold leading-snug text-white sm:text-2xl">Sábado 5 de diciembre de 2026</p>
+          </article>
+
+          <article
+            class="lift-card reveal group rounded-3xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur hover:border-[#D5B36A]/70 hover:bg-white/[0.09]"
+            style="transition-delay: 60ms">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-regular fa-clock text-2xl sm:text-3xl" aria-hidden="true"></i>
             </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#10243B]/50">Duración</h3>
-            <p class="mt-2 text-lg font-semibold">3 horas</p>
-          </div>
-          <div class="reveal rounded-2xl border border-[#10243B]/10 bg-white p-7 text-center transition hover:-translate-y-1 hover:border-[#D5B36A] hover:shadow-lg hover:shadow-[#10243B]/5" style="transition-delay: 180ms">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10243B] text-[#D5B36A]">
-              <i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Hora</p>
+            <p class="mt-2 text-xl font-semibold leading-snug text-white sm:text-2xl">5:00 p. m. – 8:00 p. m.</p>
+          </article>
+
+          <article
+            class="lift-card reveal group rounded-3xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur hover:border-[#D5B36A]/70 hover:bg-white/[0.09]"
+            style="transition-delay: 120ms">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-solid fa-hourglass-half text-2xl sm:text-3xl" aria-hidden="true"></i>
             </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#10243B]/50">Modalidad</h3>
-            <p class="mt-2 text-lg font-semibold">Presencial</p>
-          </div>
-          <div class="reveal rounded-2xl border border-[#10243B]/10 bg-white p-7 text-center transition hover:-translate-y-1 hover:border-[#D5B36A] hover:shadow-lg hover:shadow-[#10243B]/5" style="transition-delay: 240ms">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10243B] text-[#D5B36A]">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Duración</p>
+            <p class="mt-2 text-xl font-semibold leading-snug text-white sm:text-2xl">3 horas</p>
+          </article>
+
+          <article
+            class="lift-card reveal group rounded-3xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur hover:border-[#D5B36A]/70 hover:bg-white/[0.09]"
+            style="transition-delay: 180ms">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-solid fa-chalkboard-user text-2xl sm:text-3xl" aria-hidden="true"></i>
             </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-[#10243B]/50">Lugar</h3>
-            <p class="mt-2 text-lg font-semibold">San Isidro, Lima</p>
-          </div>
-          <div class="reveal rounded-2xl border border-[#D5B36A] bg-[#10243B] p-7 text-center text-white" style="transition-delay: 300ms">
-            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#D5B36A] text-[#10243B]">
-              <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Modalidad</p>
+            <p class="mt-2 text-xl font-semibold leading-snug text-white sm:text-2xl">Presencial</p>
+          </article>
+
+          <article
+            class="lift-card reveal group rounded-3xl border border-white/10 bg-white/[0.06] p-8 text-center backdrop-blur hover:border-[#D5B36A]/70 hover:bg-white/[0.09]"
+            style="transition-delay: 240ms">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-solid fa-location-dot text-2xl sm:text-3xl" aria-hidden="true"></i>
             </span>
-            <h3 class="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-white/60">Inversión</h3>
-            <p class="mt-1 font-display text-4xl font-bold text-[#D5B36A]">S/ 59</p>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Lugar</p>
+            <p class="mt-2 text-xl font-semibold leading-snug text-white sm:text-2xl">San Isidro, Lima</p>
+          </article>
+
+          <article
+            class="lift-card reveal relative overflow-hidden rounded-3xl border border-[#D5B36A]/70 bg-gradient-to-br from-[#D5B36A]/25 via-[#D5B36A]/10 to-transparent p-8 text-center"
+            style="transition-delay: 300ms">
+            <span class="icon-tile mx-auto h-16 w-16 rounded-2xl sm:h-[4.5rem] sm:w-[4.5rem]">
+              <i class="fa-solid fa-ticket text-2xl sm:text-3xl" aria-hidden="true"></i>
+            </span>
+            <p class="mt-6 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D5B36A]">Inversión</p>
+            <p class="mt-2 font-display text-4xl font-bold leading-none text-[#F6EBCF] sm:text-5xl">S/ 59</p>
+            <p class="mt-2 text-[11px] uppercase tracking-[0.2em] text-white/50">Pago único</p>
+          </article>
+        </div>
+
+        <!-- Reserva -->
+        <div class="reveal mt-12 flex flex-col items-center gap-4 text-center">
+          <a href="https://wa.me/51994613551?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%20s%C3%A1bado%205%20de%20diciembre%20de%202026%2C%20de%205%3A00%20p.m.%20a%208%3A00%20p.m.%2C%20en%20San%20Isidro%2C%20Lima.%20Inversi%C3%B3n%3A%20S%2F%2059.%20%C2%BFMe%20compartes%20las%20instrucciones%20de%20inscripci%C3%B3n%20y%20pago%3F"
+            target="_blank" rel="noopener noreferrer"
+            class="group relative inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#16845B] px-8 py-5 text-base font-bold text-white shadow-2xl shadow-black/40 transition hover:-translate-y-1 hover:bg-[#126d4b] sm:w-auto sm:px-12 sm:text-lg">
+            <span class="absolute inset-0 -z-10 rounded-full bg-[#16845B]/50 blur-xl" aria-hidden="true"></span>
+            <i class="fab fa-whatsapp text-3xl" aria-hidden="true"></i>
+            Reservar mi lugar por WhatsApp
+            <i class="fa-solid fa-arrow-right text-base transition-transform group-hover:translate-x-1"
+              aria-hidden="true"></i>
+          </a>
+          <p class="text-sm text-white/60">Inscripción directa por WhatsApp · Inversión única de S/ 59.</p>
+        </div>
+
+        <!-- Logos de marca -->
+        <div
+          class="reveal mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 sm:flex-row sm:gap-8">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/40">Organiza</p>
+          <div class="flex items-center gap-4">
+            <span class="logo-tile h-12 w-[5.5rem] p-1.5">
+              <img src="img/logo-julissa.jpeg" alt="Julissa Márquez" class="h-full w-full object-contain" width="88"
+                height="48" loading="lazy" decoding="async">
+            </span>
+            <span class="logo-tile logo-tile-light h-12 w-24 p-1.5">
+              <img src="img/logo-trova.jpeg" alt="Trova Inversiones" class="h-full w-full object-contain" width="96"
+                height="40" loading="lazy" decoding="async">
+            </span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 7. RESERVAS ================= -->
-    <section class="bg-[#F1F2F4] py-16 sm:py-20" aria-labelledby="titulo-reservas">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="reveal relative overflow-hidden rounded-[2rem] bg-[#10243B] text-white shadow-2xl shadow-[#10243B]/20">
-          <div class="navy-texture absolute inset-0" aria-hidden="true"></div>
-          <div class="relative px-6 py-12 text-center sm:px-10 sm:py-16 lg:px-16">
-            <p class="inline-flex items-center gap-3 rounded-full border border-[#D5B36A]/40 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#E8D7B2]">
-              <span class="h-1.5 w-1.5 rounded-full bg-[#D5B36A]" aria-hidden="true"></span>
-              Inscripciones abiertas
-            </p>
-            <h2 id="titulo-reservas" class="font-display mt-6 text-3xl font-bold sm:text-4xl lg:text-5xl">
-              Información y reservas
-            </h2>
-            <p class="mt-3 text-lg font-medium text-[#D5B36A]">Masterclass: Remates Judiciales Desde Cero</p>
-
-            <dl class="mx-auto mt-8 grid max-w-2xl gap-x-10 gap-y-3 text-left text-[15px] sm:grid-cols-2">
-              <div class="flex justify-between gap-4 border-b border-white/10 py-2">
-                <dt class="text-white/60">Fecha</dt>
-                <dd class="font-semibold">Sábado 5 de diciembre de 2026</dd>
-              </div>
-              <div class="flex justify-between gap-4 border-b border-white/10 py-2">
-                <dt class="text-white/60">Hora</dt>
-                <dd class="font-semibold">5:00 p. m. a 8:00 p. m.</dd>
-              </div>
-              <div class="flex justify-between gap-4 border-b border-white/10 py-2">
-                <dt class="text-white/60">Lugar</dt>
-                <dd class="font-semibold">San Isidro, Lima</dd>
-              </div>
-              <div class="flex justify-between gap-4 border-b border-white/10 py-2">
-                <dt class="text-white/60">Modalidad</dt>
-                <dd class="font-semibold">Presencial</dd>
-              </div>
-              <div class="flex justify-between gap-4 border-b border-white/10 py-2 sm:border-b-0">
-                <dt class="text-white/60">Duración</dt>
-                <dd class="font-semibold">3 horas</dd>
-              </div>
-              <div class="flex justify-between gap-4 py-2">
-                <dt class="text-white/60">Inversión</dt>
-                <dd class="font-bold text-[#D5B36A]">S/ 59</dd>
-              </div>
-            </dl>
-
-            <p class="mt-8 text-lg font-medium text-white/90">
-              ¿Estás listo para conocer este mundo desde una perspectiva práctica?
-            </p>
-            <p class="mt-2 text-sm text-white/60">Reserva tu participación directamente por WhatsApp.</p>
-
-            <a href="https://wa.me/51994613551?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%20s%C3%A1bado%205%20de%20diciembre%20de%202026%2C%20de%205%3A00%20p.m.%20a%208%3A00%20p.m.%2C%20en%20San%20Isidro%2C%20Lima.%20Inversi%C3%B3n%3A%20S%2F%2059.%20%C2%BFMe%20compartes%20las%20instrucciones%20de%20inscripci%C3%B3n%20y%20pago%3F"
-              target="_blank" rel="noopener noreferrer"
-              class="group mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#16845B] px-8 py-4 text-base font-bold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5 hover:bg-[#126d4b] sm:w-auto sm:px-10">
-              <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-              Reservar mi lugar por WhatsApp
-              <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"
-                aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 8. FAQ ================= -->
+    <!-- ================= 7. FAQ ================= -->
     <section id="faq" class="scroll-mt-24 bg-white py-20 sm:py-24" aria-labelledby="titulo-faq">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#10243B]/50">Antes de reservar</p>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#043B3E]/50">Antes de reservar</p>
           <h2 id="titulo-faq" class="font-display mt-3 text-3xl font-bold sm:text-4xl lg:text-[2.9rem]">
             Preguntas frecuentes
           </h2>
         </div>
 
         <div class="mt-10 space-y-3">
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿Necesito tener experiencia en remates judiciales?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               No. La masterclass está dirigida especialmente a personas que desean comenzar desde cero.
             </p>
           </details>
 
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿La masterclass es presencial?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               Sí. Se realizará presencialmente en San Isidro, Lima.
             </p>
           </details>
 
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿Cuánto dura?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               Tiene una duración de tres horas, de 5:00 p. m. a 8:00 p. m.
             </p>
           </details>
 
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿Cuál es el precio?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               La inversión es de S/ 59 por participante.
             </p>
           </details>
 
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿Cuándo se realizará?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               El sábado 5 de diciembre de 2026.
             </p>
           </details>
 
-          <details class="faq-item group rounded-2xl border border-[#10243B]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F1F2F4]/60">
+          <details class="faq-item group rounded-2xl border border-[#043B3E]/10 bg-white px-6 py-5 transition open:border-[#D5B36A] open:bg-[#F2F7F5]/60">
             <summary class="flex cursor-pointer items-center justify-between gap-4 text-left text-[17px] font-semibold">
               ¿Cómo puedo reservar mi participación?
-              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#10243B]/5 text-sm transition">
+              <span class="faq-icon flex h-8 w-8 flex-none items-center justify-center rounded-full bg-[#043B3E]/5 text-sm transition">
                 <i class="fa-solid fa-plus" aria-hidden="true"></i>
               </span>
             </summary>
-            <p class="mt-4 text-[15px] leading-relaxed text-[#10243B]/70">
+            <p class="mt-4 text-[15px] leading-relaxed text-[#043B3E]/70">
               Haz clic en cualquiera de los botones de WhatsApp de esta página y comunícate directamente con Julissa
               para recibir las instrucciones de inscripción y pago.
             </p>
@@ -1016,10 +1398,10 @@
         </div>
 
         <div class="reveal mt-12 text-center">
-          <p class="text-[#10243B]/60">¿Te quedó alguna duda?</p>
+          <p class="text-[#043B3E]/60">¿Te quedó alguna duda?</p>
           <a href="https://wa.me/51994613551?text=Hola%2C%20tengo%20una%20consulta%20sobre%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%205%20de%20diciembre."
             target="_blank" rel="noopener noreferrer"
-            class="mt-3 inline-flex items-center gap-2 font-semibold text-[#16845B] transition hover:text-[#10243B]">
+            class="mt-3 inline-flex items-center gap-2 font-semibold text-[#16845B] transition hover:text-[#043B3E]">
             <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
             Escríbeme por WhatsApp
           </a>
@@ -1029,7 +1411,7 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-[#10243B] py-12 text-white">
+  <footer class="bg-[#043B3E] py-12 text-white">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:text-left">
@@ -1072,7 +1454,7 @@
   </footer>
 
   <!-- CTA fijo en móvil -->
-  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#10243B]/95 p-3 backdrop-blur md:hidden">
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#043B3E]/95 p-3 backdrop-blur md:hidden">
     <div class="flex items-center justify-between gap-3">
       <div class="px-1">
         <p class="text-[9px] font-semibold uppercase tracking-[0.18em] text-white/50">Inversión</p>
