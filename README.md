@@ -1,42 +1,72 @@
-# Landing Page - Remates Judiciales Desde Cero
+# Landing Page — Masterclass Presencial "Remates Judiciales Desde Cero"
 
-Landing page creada para promocionar el curso "Remates Judiciales Desde Cero" (Compra en Remates Judiciales + Flipping Inmobiliario) por S/ 59.
+Landing page estática para promocionar la masterclass presencial de 3 horas de Julissa Márquez.
 
-## Archivos
+- **Fecha:** sábado 5 de diciembre de 2026
+- **Horario:** 5:00 p. m. a 8:00 p. m.
+- **Lugar:** San Isidro, Lima
+- **Inversión:** S/ 59
+- **Reservas:** WhatsApp +51 994 613 551
 
-- `index.html` - Página principal con toda la información del curso y botón directo a WhatsApp.
+## Estructura
 
-## Características
+```
+landing-remates-judiciales-desde-cero/
+├── index.html   # Página completa (HTML + Tailwind CDN + estilos)
+├── img/
+│   ├── julissa-marquez.jpg      # Foto original (alta resolución)
+│   ├── julissa-marquez-web.jpg  # Foto optimizada usada por la página
+│   ├── logo-julissa.jpeg        # Marca personal
+│   └── logo-trova.jpeg          # Trova Inversiones
+└── README.md
+```
 
-- Diseño mobile first, optimizado para celular
-- Botón flotante de WhatsApp siempre visible
-- Mensaje pre-llenado hacia WhatsApp: "Hola, quiero inscribirme al curso \"Remates Judiciales Desde Cero\" por S/ 59, ¿cómo pago?"
-- Temario práctico desde cero
-- Sección "Sobre mí" con imagen referencial
-- Testimonios inventados para generar confianza
-- Preguntas Frecuentes (FAQ)
-- Precio claro: S/ 59 Único Pago
-- Totalmente responsive con Tailwind CSS
+No hay framework ni build: es un único `index.html` que usa Tailwind CSS vía CDN. Se puede abrir directamente en el navegador o publicar en cualquier hosting estático.
+
+## Ver la página en local
+
+1. Abre el Explorador de archivos.
+2. Ve a esta carpeta.
+3. Haz doble clic en `index.html`.
+
+También puedes usar VS Code + Live Server para recargar automáticamente al editar.
 
 ## Publicación
 
-### Opción 1: Netlify (Recomendado, gratis)
-1. Ve a [app.netlify.com/drop](https://app.netlify.com/drop)
-2. Arrastra la carpeta `landing-remates-judiciales-desde-cero` completa
-3. Netlify te generará un enlace al instante
+El proyecto está desplegado en Vercel:
 
-### Opción 2: Cualquier hosting
-1. Sube el archivo `index.html` al directorio `public_html` (o raíz) de tu hosting
-2. Listo, tu página estará online
+https://remates-judiciales-desde-cero.vercel.app/
 
-## Personalización
+El repositorio de GitHub es:
 
-Si deseas cambiar algo, puedes editar directamente el `index.html`:
-- **Número de WhatsApp**: Cambia `51994613551` en todos los enlaces `wa.me`
-- **Precio**: Busca "S/ 59" y actualízalo
-- **Imágenes**: Reemplaza las URLs de Unsplash por las tuyas
-- **Testimonios**: Edita la sección "Lo que dicen quienes ya dan sus primeros pasos"
-- **Colores**: Los colores principales están en la sección `:root` del CSS
+https://github.com/bluzweii-crypto/remates-judiciales-desde-cero
 
-## Datos de contacto
-WhatsApp: +51 994 613 551
+Si Vercel está conectado al repositorio, cada push a `main` genera un despliegue de producción. Para revisar cambios sin publicarlos, usa una rama distinta o un deploy de preview.
+
+## Datos que puedes editar en `index.html`
+
+| Dato | Buscar |
+| --- | --- |
+| Número de WhatsApp | `51994613551` |
+| Precio | `S/ 59` |
+| Fecha y horario | `5 de diciembre de 2026`, `5:00 p. m.` |
+| Lugar | `San Isidro, Lima` |
+| Foto de Julissa | `img/julissa-marquez-web.jpg` |
+| Logos | `img/logo-julissa.jpeg`, `img/logo-trova.jpeg` |
+| Colores de marca | `:root` en el `<style>` (`--navy`, `--gold`, `--gray`, `--wa`) |
+
+## Identidad visual
+
+- Azul marino `#10243B`
+- Dorado `#D5B36A`
+- Blanco `#FFFFFF`
+- Gris claro `#F1F2F4`
+- Verde WhatsApp `#16845B`
+
+Tipografías: Cormorant Garamond (títulos) e Inter (texto).
+
+## Notas de contenido
+
+- La página no incluye módulos, lecciones, clases grabadas ni formularios.
+- Toda la conversión se hace por WhatsApp.
+- No se incluyen testimonios ni resultados inventados.
