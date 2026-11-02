@@ -69,5 +69,6 @@ Tipografías: Cormorant Garamond (títulos) e Inter (texto).
 ## Notas de contenido
 
 - La página no incluye módulos, lecciones, clases grabadas ni formularios.
+- La sección de experiencia usa un carrusel con las 11 fotos: 3 por vista en escritorio, 2 en tablet y 1 en celular.
 - Toda la conversión se hace por WhatsApp.
 - No se incluyen testimonios ni resultados inventados.
