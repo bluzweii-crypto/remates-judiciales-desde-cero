@@ -15,7 +15,8 @@ landing-remates-judiciales-desde-cero/
 ├── index.html   # Página completa (HTML + Tailwind CDN + estilos)
 ├── img/
 │   ├── julissa-marquez.jpg      # Foto original (alta resolución)
-│   ├── julissa-marquez-web.jpg  # Foto optimizada usada por la página
+│   ├── julissa-marquez-web.jpg  # Retrato optimizado para la biografía
+│   ├── julissa-marquez-hero.jpg # Foto principal del hero
 │   ├── experiencia/             # 11 fotos de experiencia (optimizadas)
 │   ├── logo-julissa.jpeg        # Marca personal
 │   └── logo-trova.jpeg          # Trova Inversiones
@@ -52,7 +53,7 @@ Si Vercel está conectado al repositorio, cada push a `main` genera un despliegu
 | Precio | `S/ 59` |
 | Fecha y horario | `5 de diciembre de 2026`, `5:00 p. m.` |
 | Lugar | `San Isidro, Lima` |
-| Foto de Julissa | `img/julissa-marquez-web.jpg` |
+| Foto de Julissa | `img/julissa-marquez-hero.jpg` (hero), `img/julissa-marquez-web.jpg` (biografía) |
 | Logos | `img/logo-julissa.jpeg`, `img/logo-trova.jpeg` |
 | Colores de marca | `:root` en el `<style>` (`--navy`, `--gold`, `--gray`, `--wa`) |
 
