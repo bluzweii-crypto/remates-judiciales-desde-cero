@@ -16,6 +16,7 @@ landing-remates-judiciales-desde-cero/
 ├── img/
 │   ├── julissa-marquez.jpg      # Foto original (alta resolución)
 │   ├── julissa-marquez-web.jpg  # Foto optimizada usada por la página
+│   ├── experiencia/             # 7 fotos de experiencia (optimizadas)
 │   ├── logo-julissa.jpeg        # Marca personal
 │   └── logo-trova.jpeg          # Trova Inversiones
 └── README.md
