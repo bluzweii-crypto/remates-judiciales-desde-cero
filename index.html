@@ -447,9 +447,18 @@
       opacity: 1;
     }
 
-    /* Cuenta regresiva */
-    .countdown-num {
-      font-variant-numeric: tabular-nums;
+    /* Marca de agua delicada con el logo personal */
+    .watermark-logo {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      filter: drop-shadow(0 0 14px rgba(255, 255, 255, .08));
+    }
+
+    .sparkle {
+      position: absolute;
+      pointer-events: none;
+      color: rgba(213, 179, 106, .32);
     }
 
     /* Enlace con subrayado animado */
@@ -546,8 +555,8 @@
         target="_blank" rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-full bg-[#16845B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#126d4b] sm:px-5">
         <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
-        <span class="hidden sm:inline">Reservar mi lugar</span>
-        <span class="sm:hidden">Reservar</span>
+        <span class="hidden sm:inline">Quiero mi cupo</span>
+        <span class="sm:hidden">Mi cupo</span>
       </a>
     </div>
   </header>
@@ -623,7 +632,7 @@
               target="_blank" rel="noopener noreferrer"
               class="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#16845B] px-8 py-4 text-base font-bold text-white shadow-lg shadow-black/25 transition hover:-translate-y-0.5 hover:bg-[#126d4b] sm:w-auto">
               <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-              Quiero reservar mi lugar
+              Quiero mi cupo
               <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1"
                 aria-hidden="true"></i>
             </a>
@@ -1182,7 +1191,31 @@
       aria-labelledby="titulo-evento">
       <div class="aurora aurora-a -right-24 top-10 h-72 w-72 bg-[#0A5B5E]/70" aria-hidden="true"></div>
       <div class="aurora aurora-b -left-28 bottom-0 h-80 w-80 bg-[#D5B36A]/[0.12]" aria-hidden="true"></div>
-      <div class="watermark -left-8 bottom-6 hidden text-[12rem] lg:block" aria-hidden="true">2026</div>
+      <!-- Marca de agua: el logo personal, repetido con delicadeza -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo left-[-8%] top-[12%] w-56 -rotate-12 opacity-[0.055] sm:w-72">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo right-[-6%] top-[36%] w-44 rotate-6 opacity-[0.05] sm:w-60">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo bottom-[8%] left-[26%] hidden w-40 -rotate-6 opacity-[0.04] sm:block sm:w-52">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo bottom-[26%] right-[22%] hidden w-28 rotate-12 opacity-[0.05] md:block">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo left-[44%] top-[2%] hidden w-24 rotate-3 opacity-[0.035] lg:block">
+        <svg class="sparkle left-[14%] top-[8%] h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+        <svg class="sparkle right-[16%] top-[18%] h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+        <svg class="sparkle bottom-[18%] left-[8%] h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+        <svg class="sparkle bottom-[10%] right-[34%] h-2.5 w-2.5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+      </div>
 
       <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
@@ -1202,32 +1235,6 @@
           <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
             Una sola fecha, tres horas y toda la información que necesitas para reservar tu lugar.
           </p>
-        </div>
-
-        <!-- Cuenta regresiva -->
-        <div class="reveal mt-10 flex justify-center" data-countdown hidden>
-          <div
-            class="flex items-stretch gap-3 rounded-2xl border border-[#D5B36A]/30 bg-white/[0.05] px-4 py-4 backdrop-blur sm:gap-6 sm:px-7">
-            <div class="min-w-[58px] text-center sm:min-w-[76px]">
-              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="days">00</p>
-              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Días</p>
-            </div>
-            <span class="w-px bg-white/10" aria-hidden="true"></span>
-            <div class="min-w-[58px] text-center sm:min-w-[76px]">
-              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="hours">00</p>
-              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Horas</p>
-            </div>
-            <span class="w-px bg-white/10" aria-hidden="true"></span>
-            <div class="min-w-[58px] text-center sm:min-w-[76px]">
-              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="minutes">00</p>
-              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Minutos</p>
-            </div>
-            <span class="w-px bg-white/10" aria-hidden="true"></span>
-            <div class="min-w-[58px] text-center sm:min-w-[76px]">
-              <p class="countdown-num font-display text-3xl font-bold leading-none text-[#F6EBCF] sm:text-4xl" data-cd="seconds">00</p>
-              <p class="mt-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/50">Segundos</p>
-            </div>
-          </div>
         </div>
 
         <!-- Datos del evento en iconos grandes -->
@@ -1300,7 +1307,7 @@
             class="group relative inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#16845B] px-8 py-5 text-base font-bold text-white shadow-2xl shadow-black/40 transition hover:-translate-y-1 hover:bg-[#126d4b] sm:w-auto sm:px-12 sm:text-lg">
             <span class="absolute inset-0 -z-10 rounded-full bg-[#16845B]/50 blur-xl" aria-hidden="true"></span>
             <i class="fab fa-whatsapp text-3xl" aria-hidden="true"></i>
-            Reservar mi lugar por WhatsApp
+            Quiero mi cupo
             <i class="fa-solid fa-arrow-right text-base transition-transform group-hover:translate-x-1"
               aria-hidden="true"></i>
           </a>
@@ -1309,17 +1316,15 @@
 
         <!-- Logos de marca -->
         <div
-          class="reveal mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-8 sm:flex-row sm:gap-8">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/40">Organiza</p>
-          <div class="flex items-center gap-4">
-            <span class="logo-tile h-12 w-[5.5rem] p-1.5">
-              <img src="img/logo-julissa.jpeg" alt="Julissa Márquez" class="h-full w-full object-contain" width="88"
-                height="48" loading="lazy" decoding="async">
-            </span>
-            <span class="logo-tile h-12 w-24 p-1.5">
-              <img src="img/logo-trova-blanco.png" alt="Trova Inversiones" class="h-full w-full object-contain" width="96"
-                height="40" loading="lazy" decoding="async">
-            </span>
+          class="reveal mt-12 flex flex-col items-center justify-center gap-5 border-t border-white/10 pt-8 sm:flex-row sm:gap-10">
+          <p class="text-[10px] font-semibold uppercase tracking-[0.32em] text-white/40">Organiza</p>
+          <div class="flex items-center gap-6 sm:gap-10">
+            <img src="img/logo-julissa-blanco.png" alt="Julissa Márquez"
+              class="h-16 w-auto object-contain opacity-95 sm:h-20" width="927" height="499" loading="lazy"
+              decoding="async">
+            <img src="img/logo-trova-blanco.png" alt="Trova Inversiones"
+              class="h-12 w-auto object-contain opacity-95 sm:h-14" width="1225" height="375" loading="lazy"
+              decoding="async">
           </div>
         </div>
       </div>
@@ -1431,7 +1436,19 @@
       aria-hidden="true"></div>
     <div class="watermark -right-4 -top-8 hidden text-[10rem] lg:block" aria-hidden="true">JM</div>
     <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo left-[-6%] top-[10%] w-36 -rotate-12 opacity-[0.035] sm:w-48">
+        <img src="img/logo-julissa-blanco.png" alt="" width="927" height="499"
+          class="watermark-logo right-[-4%] bottom-[12%] w-28 rotate-6 opacity-[0.03] sm:w-36">
+        <svg class="sparkle left-[10%] top-[22%] h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+        <svg class="sparkle right-[14%] top-[18%] h-2.5 w-2.5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+        </svg>
+      </div>
+      <div class="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:text-left">
           <div class="flex items-center gap-3">
             <span class="logo-tile h-14 w-24 p-2">
@@ -1459,7 +1476,7 @@
           target="_blank" rel="noopener noreferrer"
           class="inline-flex items-center gap-2 rounded-full bg-[#16845B] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#126d4b]">
           <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
-          Reservar por WhatsApp
+          Quiero mi cupo
         </a>
       </div>
 
@@ -1481,17 +1498,17 @@
         target="_blank" rel="noopener noreferrer"
         class="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#16845B] px-4 py-3 text-sm font-bold text-white">
         <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
-        Reservar mi lugar
+        Quiero mi cupo
       </a>
     </div>
   </div>
 
   <!-- Botón flotante en escritorio -->
   <a href="https://wa.me/51994613551?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%20s%C3%A1bado%205%20de%20diciembre%20de%202026%2C%20de%205%3A00%20p.m.%20a%208%3A00%20p.m.%2C%20en%20San%20Isidro%2C%20Lima.%20Inversi%C3%B3n%3A%20S%2F%2059.%20%C2%BFMe%20compartes%20las%20instrucciones%20de%20inscripci%C3%B3n%20y%20pago%3F"
-    target="_blank" rel="noopener noreferrer" aria-label="Reservar mi lugar por WhatsApp"
+    target="_blank" rel="noopener noreferrer" aria-label="Quiero mi cupo por WhatsApp"
     class="fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-full bg-[#16845B] px-5 py-4 text-sm font-bold text-white shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#126d4b] md:flex">
     <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-    Reservar · S/ 59
+    Quiero mi cupo · S/ 59
   </a>
 
   <script>
@@ -1503,40 +1520,6 @@
     const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    // Cuenta regresiva al inicio de la masterclass
-    (function () {
-      const target = new Date('2026-12-05T17:00:00-05:00').getTime();
-      const wrap = document.querySelector('[data-countdown]');
-      if (!wrap) return;
-      const fields = {
-        days: wrap.querySelector('[data-cd="days"]'),
-        hours: wrap.querySelector('[data-cd="hours"]'),
-        minutes: wrap.querySelector('[data-cd="minutes"]'),
-        seconds: wrap.querySelector('[data-cd="seconds"]'),
-      };
-      const pad = (n) => String(n).padStart(2, '0');
-
-      function tick() {
-        const diff = target - Date.now();
-        if (diff <= 0) {
-          wrap.hidden = true;
-          return;
-        }
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        if (fields.days) fields.days.textContent = pad(d);
-        if (fields.hours) fields.hours.textContent = pad(h);
-        if (fields.minutes) fields.minutes.textContent = pad(m);
-        if (fields.seconds) fields.seconds.textContent = pad(s);
-        wrap.hidden = false;
-      }
-
-      tick();
-      setInterval(tick, 1000);
-    })();
 
     // Aparición suave de secciones
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
