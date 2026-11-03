@@ -285,6 +285,43 @@
       filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .3));
     }
 
+    /* Iconos de redes sociales */
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(213, 179, 106, .35);
+      background: rgba(255, 255, 255, .05);
+      color: #E8D7B2;
+      font-size: 1rem;
+      transition: transform .35s ease, background .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      background: #D5B36A;
+      border-color: #D5B36A;
+      color: #012023;
+      box-shadow: 0 14px 26px -16px rgba(0, 0, 0, .9);
+    }
+
+    .social-link-sm {
+      width: 2rem;
+      height: 2rem;
+      font-size: .8rem;
+    }
+
+    @media (min-width: 640px) {
+      .social-link-sm {
+        width: 2.15rem;
+        height: 2.15rem;
+        font-size: .85rem;
+      }
+    }
+
     .logo-tile-light {
       background: #FFFFFF;
       border-color: rgba(213, 179, 106, .55);
@@ -544,20 +581,37 @@
         </span>
       </a>
 
-      <nav class="hidden items-center gap-7 text-sm font-medium text-white/75 md:flex" aria-label="Navegación principal">
+      <nav class="hidden items-center gap-5 text-sm font-medium text-white/75 lg:flex xl:gap-7" aria-label="Navegación principal">
         <a href="#expositora" class="transition hover:text-[#D5B36A]">Expositora</a>
+        <a href="#trova" class="transition hover:text-[#D5B36A]">Trova</a>
         <a href="#masterclass" class="transition hover:text-[#D5B36A]">La masterclass</a>
         <a href="#evento" class="transition hover:text-[#D5B36A]">Evento</a>
         <a href="#faq" class="transition hover:text-[#D5B36A]">Preguntas</a>
       </nav>
 
-      <a href="https://wa.me/51994613551?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%20s%C3%A1bado%205%20de%20diciembre%20de%202026%2C%20de%205%3A00%20p.m.%20a%208%3A00%20p.m.%2C%20en%20San%20Isidro%2C%20Lima.%20Inversi%C3%B3n%3A%20S%2F%2059.%20%C2%BFMe%20compartes%20las%20instrucciones%20de%20inscripci%C3%B3n%20y%20pago%3F"
-        target="_blank" rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full bg-[#16845B] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#126d4b] sm:px-5">
-        <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
-        <span class="hidden sm:inline">Quiero mi cupo</span>
-        <span class="sm:hidden">Mi cupo</span>
-      </a>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center gap-1.5" aria-label="Redes sociales de Julissa Márquez">
+          <a href="https://lc.cx/AtBSGZ" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram de Julissa Márquez" title="Instagram" class="social-link social-link-sm">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tiktok.com/@julissamarquez.oficial" target="_blank" rel="noopener noreferrer"
+            aria-label="TikTok de Julissa Márquez" title="TikTok" class="social-link social-link-sm">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+          </a>
+          <a href="https://lc.cx/lZndX_" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook de Julissa Márquez" title="Facebook" class="social-link social-link-sm">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </div>
+        <a href="https://wa.me/51994613551?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20la%20Masterclass%20Presencial%20Remates%20Judiciales%20Desde%20Cero%20del%20s%C3%A1bado%205%20de%20diciembre%20de%202026%2C%20de%205%3A00%20p.m.%20a%208%3A00%20p.m.%2C%20en%20San%20Isidro%2C%20Lima.%20Inversi%C3%B3n%3A%20S%2F%2059.%20%C2%BFMe%20compartes%20las%20instrucciones%20de%20inscripci%C3%B3n%20y%20pago%3F"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full bg-[#16845B] px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-[#126d4b] sm:px-5">
+          <i class="fab fa-whatsapp text-lg" aria-hidden="true"></i>
+          <span class="hidden sm:inline">Quiero mi cupo</span>
+          <span class="sm:hidden">Mi cupo</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -599,13 +653,23 @@
           </h1>
 
           <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            Descubre cómo funciona el mundo de los remates judiciales y conoce las oportunidades de inversión
-            inmobiliaria y flipping.
+            Aprende cómo funcionan los remates judiciales y descubre las oportunidades de inversión inmobiliaria y
+            flipping, explicadas desde cero y en un formato presencial.
           </p>
           <p class="mt-4 max-w-xl text-base leading-relaxed text-white/65">
-            Una experiencia presencial junto a Julissa Márquez, especialista en Remates Judiciales, Flipping e
-            Inversiones Inmobiliarias.
+            Tres horas junto a Julissa Márquez, especialista en remates judiciales, flipping e inversiones
+            inmobiliarias.
           </p>
+
+          <div
+            class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E8D7B2] sm:text-[12px]">
+            <span class="inline-flex items-center gap-2">
+              <i class="fa-solid fa-award text-[#D5B36A]" aria-hidden="true"></i>
+              4 años de experiencia
+            </span>
+            <span class="h-1 w-1 rounded-full bg-[#D5B36A]/70" aria-hidden="true"></span>
+            <span>15 propiedades compradas y vendidas</span>
+          </div>
 
           <!-- Datos del evento -->
           <dl class="mt-8 grid max-w-xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/10 sm:grid-cols-4">
@@ -622,8 +686,8 @@
               <dd class="mt-1 text-sm font-semibold leading-snug">San Isidro, Lima</dd>
             </div>
             <div class="bg-[#043B3E]/80 px-4 py-4">
-              <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Inversión</dt>
-              <dd class="mt-1 text-sm font-semibold leading-snug">S/ 59</dd>
+              <dt class="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#D5B36A]">Modalidad</dt>
+              <dd class="mt-1 text-sm font-semibold leading-snug">Presencial</dd>
             </div>
           </dl>
 
@@ -667,7 +731,7 @@
           </div>
           <figcaption class="mt-5 flex items-center justify-center gap-3 text-center text-xs uppercase tracking-[0.18em] text-white/55">
             <span class="h-px w-8 bg-[#D5B36A]/60" aria-hidden="true"></span>
-            4 años de experiencia · 15 propiedades
+            4 años de experiencia · 15 propiedades compradas y vendidas
             <span class="h-px w-8 bg-[#D5B36A]/60" aria-hidden="true"></span>
           </figcaption>
         </figure>
@@ -710,7 +774,7 @@
               <span>Inversiones inmobiliarias</span><span class="text-[#D5B36A]">◆</span>
               <span>Sábado 5 de diciembre de 2026</span><span class="text-[#D5B36A]">◆</span>
               <span>San Isidro, Lima</span><span class="text-[#D5B36A]">◆</span>
-              <span>Inversión S/ 59</span><span class="text-[#D5B36A]">◆</span>
+              <span>Aprendizaje presencial</span><span class="text-[#D5B36A]">◆</span>
             </div>
             <div class="flex shrink-0 items-center gap-10 pr-10" aria-hidden="true">
               <span>Remates judiciales</span><span class="text-[#D5B36A]">◆</span>
@@ -718,7 +782,7 @@
               <span>Inversiones inmobiliarias</span><span class="text-[#D5B36A]">◆</span>
               <span>Sábado 5 de diciembre de 2026</span><span class="text-[#D5B36A]">◆</span>
               <span>San Isidro, Lima</span><span class="text-[#D5B36A]">◆</span>
-              <span>Inversión S/ 59</span><span class="text-[#D5B36A]">◆</span>
+              <span>Aprendizaje presencial</span><span class="text-[#D5B36A]">◆</span>
             </div>
           </div>
         </div>
@@ -871,6 +935,41 @@
                   Remates judiciales · Compras directas · Flipping inmobiliario
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3A. TROVA INVERSIONES ================= -->
+    <section id="trova" class="relative scroll-mt-24 overflow-hidden bg-[#F2F7F5] pb-4 pt-16 sm:pt-20"
+      aria-labelledby="titulo-trova">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div
+          class="brand-surface reveal relative overflow-hidden rounded-3xl border border-[#D5B36A]/30 px-6 py-9 text-white shadow-xl shadow-[#043B3E]/15 sm:px-10 sm:py-11">
+          <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <img src="img/logo-trova-blanco.png" alt="" width="1225" height="375"
+              class="watermark-logo -right-8 top-1/2 w-48 -translate-y-1/2 rotate-6 opacity-[0.06] sm:w-72">
+            <svg class="sparkle left-[6%] top-[18%] h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z" />
+            </svg>
+          </div>
+          <div class="relative grid gap-7 md:grid-cols-[0.75fr_1.25fr] md:items-center md:gap-12">
+            <div class="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#D5B36A]">Respaldo empresarial</p>
+              <img src="img/logo-trova-blanco.png" alt="Trova Inversiones"
+                class="h-12 w-auto object-contain sm:h-14" width="1225" height="375" loading="lazy"
+                decoding="async">
+            </div>
+            <div class="text-center md:text-left">
+              <h2 id="titulo-trova" class="font-display text-2xl font-semibold leading-tight sm:text-3xl">
+                TROVA INVERSIONES
+              </h2>
+              <p class="mt-3 text-[15px] leading-relaxed text-white/70 sm:text-base">
+                Es la empresa desde la que Julissa Márquez desarrolla su actividad en el sector inmobiliario:
+                remates judiciales, compras directas y flipping. Esta masterclass nace de esa experiencia construida
+                en operaciones reales.
+              </p>
             </div>
           </div>
         </div>
@@ -1040,7 +1139,7 @@
             </button>
           </div>
 
-          <p class="mt-3 text-center text-xs text-[#043B3E]/45">Desliza o usa las flechas para recorrer las 11
+          <p class="mt-3 text-center text-xs text-[#043B3E]/45">Desliza o usa las flechas para recorrer las 12
             fotos.</p>
         </div>
 
@@ -1071,8 +1170,8 @@
           </h2>
           <div class="gold-rule mx-auto mt-6 w-24"></div>
           <p class="mt-6 text-xl font-medium leading-relaxed text-white/90 sm:text-[1.35rem]">
-            Una experiencia presencial de tres horas para conocer el mundo de los remates judiciales desde cero y
-            acercarte a las oportunidades de inversión inmobiliaria.
+            Tres horas presenciales para entender cómo funcionan los remates judiciales desde cero, en contacto
+            directo con la experiencia de Julissa y con espacio para tus preguntas.
           </p>
         </div>
 
@@ -1083,6 +1182,10 @@
           </p>
           <p>
             También conocerás la relación entre los remates judiciales, las compras inmobiliarias y el flipping.
+          </p>
+          <p>
+            La idea es que termines con una visión clara del proceso y con un espacio real para plantear tus dudas
+            directamente a Julissa.
           </p>
         </div>
 
@@ -1233,7 +1336,8 @@
           </p>
           <div class="gold-rule-strong mx-auto mt-7 w-32"></div>
           <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-            Una sola fecha, tres horas y toda la información que necesitas para reservar tu lugar.
+            Tres horas para entender el proceso, resolver tus dudas y conocer de cerca la experiencia de Julissa
+            en remates judiciales, compras directas y flipping.
           </p>
         </div>
 
@@ -1311,7 +1415,7 @@
             <i class="fa-solid fa-arrow-right text-base transition-transform group-hover:translate-x-1"
               aria-hidden="true"></i>
           </a>
-          <p class="text-sm text-white/60">Inscripción directa por WhatsApp · Inversión única de S/ 59.</p>
+          <p class="text-sm text-white/60">Tres horas presenciales con Julissa por una inversión única de S/ 59.</p>
         </div>
 
         <!-- Logos de marca -->
@@ -1449,20 +1553,36 @@
         </svg>
       </div>
       <div class="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
-        <div class="flex flex-col items-center gap-4 sm:flex-row sm:text-left">
-          <div class="flex items-center gap-3">
-            <span class="logo-tile h-14 w-24 p-2">
-              <img src="img/logo-julissa.jpeg" alt="Logo de Julissa Márquez" class="h-full w-full object-contain"
-                width="96" height="56" loading="lazy" decoding="async">
-            </span>
-            <span class="logo-tile h-14 w-24 p-2">
-              <img src="img/logo-trova-blanco.png" alt="Trova Inversiones" class="h-full w-full object-contain" width="96"
-                height="36" loading="lazy" decoding="async">
-            </span>
+        <div class="flex flex-col items-center gap-4">
+          <div class="flex flex-col items-center gap-4 sm:flex-row sm:text-left">
+            <div class="flex items-center gap-3">
+              <span class="logo-tile h-14 w-24 p-2">
+                <img src="img/logo-julissa.jpeg" alt="Logo de Julissa Márquez" class="h-full w-full object-contain"
+                  width="96" height="56" loading="lazy" decoding="async">
+              </span>
+              <span class="logo-tile h-14 w-24 p-2">
+                <img src="img/logo-trova-blanco.png" alt="Trova Inversiones" class="h-full w-full object-contain" width="96"
+                  height="36" loading="lazy" decoding="async">
+              </span>
+            </div>
+            <div>
+              <p class="font-display text-xl font-semibold">Julissa Márquez</p>
+              <p class="mt-1 text-sm text-white/60">Remates Judiciales · Flipping · Inversiones Inmobiliarias</p>
+            </div>
           </div>
-          <div>
-            <p class="font-display text-xl font-semibold">Julissa Márquez</p>
-            <p class="mt-1 text-sm text-white/60">Remates Judiciales · Flipping · Inversiones Inmobiliarias</p>
+          <div class="flex items-center gap-2.5">
+            <a href="https://lc.cx/AtBSGZ" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram de Julissa Márquez" title="Instagram" class="social-link">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com/@julissamarquez.oficial" target="_blank" rel="noopener noreferrer"
+              aria-label="TikTok de Julissa Márquez" title="TikTok" class="social-link">
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://lc.cx/lZndX_" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook de Julissa Márquez" title="Facebook" class="social-link">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
 
@@ -1508,7 +1628,7 @@
     target="_blank" rel="noopener noreferrer" aria-label="Quiero mi cupo por WhatsApp"
     class="fixed bottom-6 right-6 z-40 hidden items-center gap-3 rounded-full bg-[#16845B] px-5 py-4 text-sm font-bold text-white shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#126d4b] md:flex">
     <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-    Quiero mi cupo · S/ 59
+    Quiero mi cupo
   </a>
 
   <script>
